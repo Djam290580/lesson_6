@@ -10,17 +10,17 @@
 with open('text_4.txt', 'w') as my_file:
     my_file.writelines(['One - 1\n', 'Two - 2\n', 'Three - 3\n', 'Four - 4\n'])
 
-rus_list = {'One' : 'Один', 'Two' : 'Два', 'Three' : 'Три', 'Four' : 'Четыре'}
-new_file = []
-with open('text_4.txt', 'r') as my_file:
-    line = my_file.read().split('\n')
-    print(line)
-    with open('text_44.txt', 'a') as my_file:
-        for i in line:
-            i = i.split(' - ')
-            print(i)
-        new_file.append(rus_list[i[0]] + ' - ' + i[1])
-        print(new_file)
+rus_dict = {'One': 'Один', 'Two': 'Два', 'Three': 'Три', 'Four': 'Четыре'}
+
+with open('text_44.txt', 'w') as my_file_new:
+        with open('text_4.txt') as my_file:
+            line = my_file.read().split('\n')
+            print(line)
+            for i in line:
+                i = i.split(' - ')
+                print(i)
+                my_file_new.writelines(rus_dict[i[0]] + ' - ' + i[1] + '\n')
+
 
 # rus = {'One' : 'Один', 'Two' : 'Два', 'Three' : 'Три', 'Four' : 'Четыре'}
 # new_file = []
