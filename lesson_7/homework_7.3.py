@@ -47,7 +47,6 @@ class Cell:
         return round(self.number / other.number)
 
 
-
 cell_1 = Cell(30)
 cell_2 = Cell(25)
 print(cell_2.make_order(5))
@@ -55,8 +54,3 @@ print(cell_1 + cell_2)
 print(cell_1 - cell_2)
 print(cell_1 * cell_2)
 print(cell_1 / cell_2)
-
-
-
-
-

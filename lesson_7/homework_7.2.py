@@ -10,6 +10,7 @@
 
 from abc import ABC, abstractmethod
 
+
 class Clothes(ABC):
     def __init__(self, param_1):
         self.param_1 = param_1
@@ -18,18 +19,20 @@ class Clothes(ABC):
     def fabric_consumption(self):
         pass
 
+
 class Coat(Clothes):
     @property
     def fabric_consumption(self):
         return f'Для производства пальто, размер: {self.param_1}\n\
-расход ткани составит: {round(self.param_1/6.5 + 0.5, 1)}'
+расход ткани составит: {round(self.param_1 / 6.5 + 0.5, 1)}'
 
 
 class Suit(Clothes):
     @property
     def fabric_consumption(self):
         return f'Для производства костюма, рост: {self.param_1}\n\
-расход ткани составит:: {round(2*self.param_1 + 0.3, 1)}'
+расход ткани составит:: {round(2 * self.param_1 + 0.3, 1)}'
+
 
 coat = Coat(50)
 print(coat.fabric_consumption)
