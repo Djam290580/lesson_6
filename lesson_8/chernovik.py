@@ -87,7 +87,7 @@ class StoreMashines:
                 print('--------------------------------')
                 for i, item in enumerate(self.my_store, 1):
                     print(f'{i}) {item}')
-                # pprint(f'Весь склад:\n {self.my_store_full}')
+                pprint(f'Весь склад:\n {self.my_store}')
                 return f'Выход'
                 break
             else:
